@@ -44,7 +44,10 @@ const Layout = ({ isAuthenticated, profile, signInButton, signOutButton }) => {
           <li><a className="text-sm text-gray-400 hover:text-gray-500" href="#">Contact</a></li>
 
         </ul>
-        {isAuthenticated === true ? signOutButton : signInButton}
+        <div className={`${isOpen ? "hidden" : ""}`}>
+              {isAuthenticated === true ? signOutButton : signInButton}
+            </div>
+       
 
       </nav>
       <div className={`${isOpen ? "" : "hidden"} navbar-menu relative z-50`}>
