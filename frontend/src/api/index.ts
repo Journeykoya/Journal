@@ -51,7 +51,7 @@ export const getProfile = async () => {
 };
 
 
-export const logout = async () => {
+export const signOut = async () => {
   const response = await client.post<Profile>("/auth/logout/");
   localStorage.removeItem(TOKEN_KEY);
   return response.data;
